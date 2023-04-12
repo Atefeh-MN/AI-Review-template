@@ -1,7 +1,8 @@
 .navbar {
   border-bottom: $navbar-border-bottom;
-  box-shadow: $navbar-box-shadow;
-
+  box-shadow:$box-shadow-sm;
+    --bs-navbar-padding-x: 0.9rem;
+    --bs-navbar-padding-y: 0.5rem!important;
   @include media-breakpoint-down(md) {
     width: 100vw;
   }
@@ -143,11 +144,16 @@
 }
 
 .navbar-nav {
-  direction: ltr;
+ 
 }
 
 .navbar input {
-  direction: ltr;
+}
+.navAuth{
+  display: flex;
+  border: 1px solid $gray-200;
+  border-radius: $border-radius-lg;
+  font-weight: 600;
 }
 
 .navbar .form-control {

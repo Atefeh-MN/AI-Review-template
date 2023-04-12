@@ -7,9 +7,7 @@ import  { Router } from "./routes";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { LayoutProvider } from "./contexts/LayoutContext";
 
-
 const App = () => {
- 
 
   return (
     <HelmetProvider>
@@ -19,7 +17,7 @@ const App = () => {
       />
         <ThemeProvider>
             <LayoutProvider>
-          <Router/>      
+                <Router/>      
             </LayoutProvider>
         </ThemeProvider>
     </HelmetProvider>

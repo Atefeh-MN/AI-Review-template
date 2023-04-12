@@ -22,7 +22,7 @@ export const THEME = {
 };
 
 export const THEME_PALETTE_LIGHT = {
-  primary: "#3B82EC",
+  primary: "#fff",
   "primary-dark": "#1659c7",
   "primary-light": "#84aef2",
   secondary: "#495057",
