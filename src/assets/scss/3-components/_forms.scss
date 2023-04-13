@@ -12,6 +12,8 @@
       box-shadow: none;
       outline: 0;
     }
+    
+
   }
 
   .btn {
@@ -23,3 +25,9 @@
     }
   }
 }
+.form-control{
+  &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $gray-500;
+    font-size: small;
+     opacity: 1; /* Firefox */
+}}

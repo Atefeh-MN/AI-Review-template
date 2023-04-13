@@ -16,7 +16,7 @@ const NavbarComponent = () => {
   return (
     <Navbar collapseOnSelect expand='lg' >  
       <Container fluid style={{width:'90%',fontSize:'initial'}}>
-        <Navbar.Brand style={{color:"#ba68c8",fontSize:'1.5rem'}} href="#home">MARLO</Navbar.Brand>
+        <Navbar.Brand style={{color:"#A7A3FF",fontSize:'1.5rem'}} href="#home">MARLO</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
          <Navbar.Offcanvas
               placement="end"
@@ -34,7 +34,7 @@ const NavbarComponent = () => {
              <Nav className={i18n.language==='en'?'ms-auto':"me-auto"}>
                 <NavBarAuth/>
                <Link className="nav-link p-2 mx-3" to='/cart'> 
-                  <ShoppingCart size="28" color="#ba68c8"/></Link>
+                  <ShoppingCart size="28" color="#A7A3FF" variant="Bulk"/></Link>
               </Nav>
               <NavbarLanguages/>
                 </Offcanvas.Body>
