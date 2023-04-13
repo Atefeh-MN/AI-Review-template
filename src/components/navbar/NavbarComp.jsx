@@ -41,7 +41,6 @@ const NavbarComponent = () => {
         </Navbar.Offcanvas>
         
       </Container>
-       
     </Navbar>
   );
 };

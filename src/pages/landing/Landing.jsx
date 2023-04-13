@@ -27,7 +27,7 @@ const Landing = () => {
   }, []);
   return (
     <React.Fragment>
-<div>this is Home page !!!</div>
+        <div>this is Home page !!!</div>
     </React.Fragment>
   );
 };

@@ -3,6 +3,12 @@ import LandingLayout from "./layouts/Landing";
 import { createBrowserRouter, RouterProvider, Routes } from 'react-router-dom'
 import DashboardLayout from "./layouts/Dashboard";
 import AuthLayout from "./layouts/Auth";
+import SignInPage from "./pages/auth/SignIn";
+import SignUpPage from "./pages/auth/SignUp";
+import Page404 from "./pages/auth/Page404";
+import Page500 from "./pages/auth/Page500";
+import ResetPasswordPage from "./pages/auth/ResetPassword";
+import Pricing from "./pages/Pricing";
 
 export const Router = () => {
 
@@ -26,7 +32,7 @@ export const Router = () => {
       },
       {
          path: "/pricing",
-        element: <div>pricing</div>,
+        element: <Pricing/>,
       },
     ],
     },
@@ -41,22 +47,32 @@ export const Router = () => {
     
     ],
     },
-    {
-        element: <AuthLayout />,
-        children: [
-          {
-            path: "signIn",
-            element: <div>sign in</div>,
-          },
-          {
-            path: "signOut",
-          },
-          {
-            path: "signUp",
-             element: <div>sign up</div>,
-          },
-        ],
+   {
+    path: "auth",
+    element: <AuthLayout />,
+    children: [
+      {
+        path: "sign-in",
+        element: <SignInPage />,
       },
+      {
+        path: "sign-up",
+        element: <SignUpPage />,
+      },
+      {
+        path: "reset-password",
+        element: <ResetPasswordPage />,
+      },
+      {
+        path: "404",
+        element: <Page404 />,
+      },
+      {
+        path: "500",
+        element: <Page500 />,
+      },
+    ],
+  },
     ]
   );
   return <RouterProvider router={router} />;

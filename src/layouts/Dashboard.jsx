@@ -5,12 +5,11 @@ import Main from "../components/Main";
 
 const DashboardLayout = ({ children }) => (
   <React.Fragment>
-    
       <Main>
           {children}
           <Outlet/>
       </Main>
-    {/* <Settings /> */}
+    {/* <Settings /> */} 
   </React.Fragment>
 );
 
