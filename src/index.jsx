@@ -11,5 +11,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <App />
   </React.StrictMode>
 )
-document.documentElement.dir = i18n.language==="en"?'ltr':'rtl'
+// document.documentElement.dir = i18n.language==="en"?'ltr':'rtl'
 

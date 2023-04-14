@@ -14,13 +14,13 @@ import { useTranslation } from 'react-i18next';
 
 const Landing = () => {
   const { setTheme } = useTheme();
-  // const { setPosition, setBehavior } = useSidebar();
+  const { setPosition, setBehavior } = useSidebar();
   const { setLayout } = useLayout();
 
   useEffect(() => {
     setTheme(THEME.DEFAULT);
-    // setPosition(SIDEBAR_POSITION.LEFT);
-    // setBehavior(SIDEBAR_BEHAVIOR.STICKY);
+    setPosition(SIDEBAR_POSITION.RIGHT);
+    setBehavior(SIDEBAR_BEHAVIOR.STICKY);
     setLayout(LAYOUT.FLUID);
 
     // eslint-disable-next-line react-hooks/exhaustive-deps

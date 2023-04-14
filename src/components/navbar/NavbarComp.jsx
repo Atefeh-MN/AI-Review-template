@@ -14,7 +14,7 @@ const NavbarComponent = () => {
   const { isOpen, setIsOpen } = useSidebar();
 
   return (
-    <Navbar collapseOnSelect expand='lg' >  
+    <Navbar collapseOnSelect expand='lg' dir={i18n.language === 'en' ? 'ltr' : "rtl"} >  
       <Container fluid style={{width:'90%',fontSize:'initial'}}>
         <Navbar.Brand style={{color:"#A7A3FF",fontSize:'1.5rem'}} href="#home">MARLO</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />

@@ -5,6 +5,7 @@ import  { Router } from "./routes";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { LayoutProvider } from "./contexts/LayoutContext";
 import { AuthProvider } from "./contexts/JWTContext";
+import { SidebarProvider } from "./contexts/SidebarContext";
 
 const App = () => {
 
@@ -14,12 +15,14 @@ const App = () => {
         titleTemplate="AI Ecommerce Content Template"
         defaultTitle="AI Ecommerce Content"
       />
-        <ThemeProvider>
+      <ThemeProvider>
+        <SidebarProvider>
         <LayoutProvider>
           <AuthProvider>
             <Router /> 
             </AuthProvider>
-            </LayoutProvider>
+          </LayoutProvider>
+          </SidebarProvider>
         </ThemeProvider>
     </HelmetProvider>
   );

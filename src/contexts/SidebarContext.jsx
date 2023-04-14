@@ -15,7 +15,7 @@ function SidebarProvider({ children }) {
   const [isOpen, setIsOpen] = useState(true);
   const [position, setPosition] = useSettingsState(
     "sidebarPosition",
-    SIDEBAR_POSITION.LEFT
+    SIDEBAR_POSITION.RIGHT
   );
   const [behavior, setBehavior] = useSettingsState(
     "sidebarBehavior",

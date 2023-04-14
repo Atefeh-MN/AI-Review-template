@@ -4,6 +4,14 @@ import { Dropdown } from "react-bootstrap";
 import {setPageDirection}from '../../utils/direction';
 import usFlag from "../../assets/img/flags/us.png";
 import irFlag from '../../assets/img/flags/ir.png';
+import useSidebar from '../../hooks/useSidebar';
+import {
+  SIDEBAR_POSITION,
+  SIDEBAR_BEHAVIOR,
+  LAYOUT,
+  THEME,
+} from "../../constants";
+
 const languageOptions = {
   en: {
     icon: usFlag,
@@ -19,7 +27,7 @@ const languageOptions = {
 
 const NavbarLanguages = () => {
   const { i18n } = useTranslation();
-
+ const { setPosition, setBehavior } = useSidebar();
   const selectedLanguage = languageOptions[i18n.language];
    
   return (
@@ -35,7 +43,10 @@ const NavbarLanguages = () => {
           <Dropdown.Item
             key={language}
             className="d-flex p-1"
-            onClick={() => {i18n.changeLanguage(language)
+            onClick={() =>
+            {
+              i18n.changeLanguage( language )
+                setPosition(language ==='en'? SIDEBAR_POSITION.LEFT:SIDEBAR_POSITION.RIGHT);
              setPageDirection(language)}}
           >
             <img

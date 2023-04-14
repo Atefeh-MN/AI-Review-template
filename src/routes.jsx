@@ -9,6 +9,8 @@ import Page404 from "./pages/auth/Page404";
 import Page500 from "./pages/auth/Page500";
 import ResetPasswordPage from "./pages/auth/ResetPassword";
 import Pricing from "./pages/Pricing";
+import Default from "./pages/dashboards/Default";
+import Social from "./pages/dashboards/Social";
 
 export const Router = () => {
 
@@ -37,16 +39,31 @@ export const Router = () => {
     ],
     },
     {
-    path: "/dashboard",
+    path: "dashboard",
     element: <DashboardLayout />,
     children: [
       {
-        path: "",
-        element: <div>hiii dashboard</div>,
+        path: "default",
+        element: <Default />,
       },
-    
+      {
+        path: "analytics",
+        element: <div>Analytics</div> ,
+      },
+      {
+        path: "saas",
+        element: <div>sass</div>,
+      },
+      {
+        path: "social",
+        element: <Social />,
+      },
+      {
+        path: "crypto",
+        element: <div>Crypto</div>,
+      },
     ],
-    },
+  },
    {
     path: "auth",
     element: <AuthLayout />,
