@@ -6,6 +6,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import { LayoutProvider } from "./contexts/LayoutContext";
 import { AuthProvider } from "./contexts/JWTContext";
 import { SidebarProvider } from "./contexts/SidebarContext";
+import axios from "axios";
 
 const App = () => {
 
